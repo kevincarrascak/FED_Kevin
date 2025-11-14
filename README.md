@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Blauw
 
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
+  surface plane (kies uit responsive óf surface plane)
  
 </details>
 
@@ -36,14 +36,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  [link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp](https://www.mcdonalds.com/nl/nl-nl/werkenbij.html)
 
-  #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
+  #### Screenshot(s) van de eerste pagina small scree(n): 
+  Home
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
+  voor de hele familiy 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
  
 </details>
