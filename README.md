@@ -36,15 +36,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  [link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp](https://www.mcdonalds.com/nl/nl-nl/werkenbij.html)
+  [link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp](kfc.nl)
 
   #### Screenshot(s) van de eerste pagina small scree(n): 
   Home
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="images/kfc_home.png" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  voor de hele familiy 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  behind the bucket
+  <img src="images/kfc_behind-the-bucket.png" width="375px" alt="omschrijving van de pagina">
  
 </details>
 
@@ -57,6 +57,32 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+   1. Op de homepage zijn de drie knoppen rechtsboven niet duidelijk herkenbaar als knoppen.
+  2. HTML-validatie gaf enkele fouten, o.a. een missende alt bij een afbeelding.
+  3. Bij keyboard-navigatie ontbreekt bij sommige elementen een zichtbare focus, zoals bij “Bestel nu”.
+  4. Mobile & touch werkt goed; geen problemen gevonden.
+  5. De homepage mist een duidelijke headingstructuur; H1 niet zichtbaar.
+  6. Lists gebruiken correcte list-elementen.
+  7. Bijna alle afbeeldingen zijn decoratief en hebben terecht een lege alt; één afbeelding had onnodig een alt.
+  8. Geen media/video aanwezig, dus niet van toepassing.
+  9. Skiplink ontbreekt en knoppen die eruitzien als buttons zijn eigenlijk `<a>`-elementen.
+  10. Geen ondersteuning voor dark mode of high-contrast mode.
+  11. Tekst vergroten naar 200% via browser werkt niet zoals verwacht.
+  12. Geen animaties aanwezig, dus dit onderdeel is niet van toepassing.
+  13. Kleurencontrasten zijn goed; geen problemen gevonden.
+ 
+
+ <img src="images/ss_downloadknop.png" width="375px" alt="onduidelijke-download-knop_bevinding_1"
+
+<img src="images/ss_error.png" width="375px" alt="html-errors_bevinding_2"
+
+<img src="images/ss_error2.png" width="375px" alt="html-errors_bevinding_2"
+
+<img src="images/ss.png" width="375px" alt="1e-sectie-pagina_bevinding_5"
+
+<img src="images/ss_hexrood" width="375px" alt="contrast-kleuren_bevinding_13"
+
+<img src="images/ss_hexwit" width="375px" alt="contrast-kleuren_bevinding_13"
 
 </details>
 

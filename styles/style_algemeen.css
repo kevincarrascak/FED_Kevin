@@ -1,0 +1,37 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text:#111;
+	--color-kfc-red:#e4002b;
+	--color-background:#ffffff;
+	--color-section:#faf7f3;
+	
+	--color-font-dark:#000000;
+	--color-font-light:#ffffff;
+	--color-heading:#e4002b;
+}
+
+
+
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+/* jouw code */
+
