@@ -1,21 +1,104 @@
-*{
-    background-color: #ffffff;
+/* Zet de paginabackground op body, niet op ieder element (verhindert witte blokken) */
+
+
+
+body {
+  background-color: var(--color-background, #ffffff);
+  margin: 0;
 }
 
-.a{
-    height: 5em;
-    width: 5em;
+body > section {
+    padding-bottom:3em;
 }
 
-header{
-    display: flex;
-    background-color: var(--color-kfc-red);
+body > section > ul {
+  display: flex;
+  overflow-x: auto;                  /* horizontaal scrollen */
+  scroll-snap-type: x mandatory;     /* mooi "snappen" */
+  scroll-behavior: smooth;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  scrollbar-width: thin;
+  scrollbar-color: #e4002b transparent;
+
+  anchor-name: --carousel;
+
 }
 
-/* Target the inline SVG with id="a" and scale it down.
-   Change the `width` value below to make it larger/smaller (e.g. `100px`, `4em`, `50%`). */
-header svg{
-    width: 5em;
-    height: auto;
-    
+ul {
+  &::scroll-button(*) {
+    position: absolute;
+    position-anchor: --carousel;
+    position-visibility: always;
+    font-family: "Material Symbols Outlined";
+    z-index: 1;
+  }
+
+  &::scroll-button(right) {
+    position-area: bottom;
+    content: 'arrow_forward' / 'Next';
+    justify-self: end;
+  }
+
+  &::scroll-button(left) {
+    position-area: bottom;
+    content: 'arrow_back' / 'Previous';
+    justify-self: start;
+  }
+}
+
+
+/* ====== SLIDE (LI) ====== */
+body > section > ul > li {
+  flex-basis: 100%;     /* elke slide = 100% van de breedte */
+  flex-shrink: 0;
+  scroll-snap-align: center;
+}
+
+
+/* ====== FOTO'S ====== */
+body > section > ul > li img {
+ display: block;
+  width: 100%;        /* % van container, verander naar 60%/50% als je kleiner wilt */
+  max-width: 1fr;  /* maximale absolute grootte */
+  height: auto;
+  margin: 0 auto;
+}
+  
+
+
+/* ====== NAVIGATIE (bolletjes) ====== */
+body > section > nav {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  margin-top: 1rem;
+
+  display:none;
+}
+
+
+/* ====== BOLLETJES ====== */
+body > section > nav > a {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  background: #ddd;
+  color: #000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  font-size: .8rem;
+}
+
+body > section > nav > a:hover,
+body > section > nav > a:focus {
+  background: #e4002b;
+  color: #fff;
 }

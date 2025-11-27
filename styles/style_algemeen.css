@@ -1,8 +1,10 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
 }
 
 
@@ -11,18 +13,35 @@
 
 
 /*********************/
+/* FONT FACES */
+/*********************/
+@font-face {
+	font-family: "national-regular";
+	src: url("../fonts/national-regular.ttf");
+}
+
+@font-face {
+	font-family: "national-condensed-bold";
+	src: url("../fonts/national-condensed-bold.ttf");
+}
+
+@font-face {
+	font-family: "sentinel-bold";
+	src: url("../fonts/sentinel-bold-italic.ttf");
+}
+
+/*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-kfc-red:#e4002b;
-	--color-background:#ffffff;
-	--color-section:#faf7f3;
-	
-	--color-font-dark:#000000;
-	--color-font-light:#ffffff;
-	--color-heading:#e4002b;
+	--color-kfc-red: #e4002b;
+	--color-background: #ffffff;
+	--color-section: #faf7f3;
+
+	--color-font-dark: #000000;
+	--color-font-light: #ffffff;
+	--color-heading: #e4002b;
 }
 
 
@@ -35,3 +54,180 @@
 
 /* jouw code */
 
+p {
+	font-family: "national-regular", sans-serif;
+}
+
+a {
+	text-decoration: none;
+	font-family: "national-condensed-bold", sans-serif;
+
+	text-transform: uppercase;
+}
+
+/* Header / navigatie styling verplaatst vanaf style_homepage.css */
+header {
+
+	position: sticky;
+	z-index: 10;
+	top: 0;
+	height: 3.5rem;
+
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--color-background);
+}
+
+/* Verwijder standaard list-style en interne achtergrond in de header */
+header ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	display: flex;
+	align-items: center;
+
+}
+
+header ul li {
+	background: transparent;
+}
+
+
+header section {
+	position: relative;
+}
+
+/* Target the inline SVG (of img) en schaal het logo */
+header svg,
+header img a {
+	position: absolute;
+	left: 1rem;
+	top: 1rem;
+
+
+	width: 4em;
+	height: auto;
+}
+
+
+/* DRIE STREEPJES IN JE HEADER */
+header ul li button {
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+	background-color: var(--color-kfc-red);
+	border: none;
+}
+
+/* de drie streepjes */
+header ul li button span {
+	grid-row-start: 1;
+	grid-column-start: 1;
+	width: 1.2em;
+	height: .2em;
+	background-color: #fff;
+	/* of var(--color-button-text) */
+	transition-duration: .5s;
+}
+
+/* beginpositie */
+header ul li button span:nth-of-type(1) {
+	transform: translateY(-.4em);
+}
+
+header ul li button span:nth-of-type(3) {
+	transform: translateY(.4em);
+}
+
+/* OPEN (kruisje) */
+header ul li button[aria-expanded="true"] span:nth-of-type(1) {
+	transform: rotate(45deg) scaleX(1.25);
+}
+
+header ul li button[aria-expanded="true"] span:nth-of-type(2) {
+	opacity: 0;
+}
+
+header ul li button[aria-expanded="true"] span:nth-of-type(3) {
+	transform: rotate(-45deg) scaleX(1.25);
+}
+
+
+
+
+
+footer {
+	background-color: #f9f5ee;
+	padding: 3rem 1.5rem 0;
+}
+
+/* FOOTER SECTIE 1 — DE LIJST MET PLUSJES */
+footer>section:nth-of-type(1) {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+footer>section:nth-of-type(1) button {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	font-family: "national-condensed-bold";
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	border: none;
+	background: none;
+	padding: 0;
+	cursor: pointer;
+}
+
+footer hr {
+	border: none;
+	border-bottom: 3px solid #000;
+	margin: 0;
+}
+
+/* FOOTER SECTIE 2 — SOCIAL MEDIA */
+footer>section:nth-of-type(2) {
+	text-align: center;
+	margin: 3rem 0 2rem;
+}
+
+footer>section:nth-of-type(2) h2 {
+	font-size: 2.2rem;
+}
+
+footer>section:nth-of-type(2) ul {
+	list-style: none;
+	padding: 0;
+	margin-top: 2rem;
+
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+}
+
+footer>section:nth-of-type(2) ul li a {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 4.2rem;
+	height: 4.2rem;
+	border-radius: 50%;
+	background: #000;
+	color: #fff;
+	font-size: 1.6rem;
+	text-decoration: none;
+}
+
+/* BUCKET ONDERAAN */
+footer figure img {
+	display: block;
+	width: 100%;
+	max-width: 430px;
+	margin: 3rem auto 0;
+}
